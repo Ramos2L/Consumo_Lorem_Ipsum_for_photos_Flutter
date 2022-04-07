@@ -3,16 +3,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lorem_ipsum_for_photos/cubit/photos_cubit.dart';
 import 'package:lorem_ipsum_for_photos/widgets/drawer_tile.dart';
 
-class Home extends StatelessWidget {
-  const Home({ Key? key }) : super(key: key);
+class HomeGrey extends StatelessWidget {
+  const HomeGrey({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(  
         title: const Text('Lorem Ipsum for Photos'),
+        backgroundColor: Colors.grey,
       ),
-      //drawer: const DrawerTile(),
+      drawer: const DrawerTile(),
       body: Container(
         padding: const EdgeInsets.all(20),
         alignment: Alignment.center,
@@ -21,16 +22,16 @@ class Home extends StatelessWidget {
           children: [
             const Resposta(),
             const SizedBox( height: 10,),
-            ElevatedButton(
-              onPressed: () {
-                final randomPhotos = context.read<PhotosCubit>();
-                randomPhotos.photosRandom();
-              }, 
-              child: const Text('Next'),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
-              ),
-            ),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     final randomPhotos = context.read<PhotosCubit>();
+            //     randomPhotos.photosGreyRandom();
+            //   }, 
+            //   child: const Text('Next'),
+            //   style: ElevatedButton.styleFrom(
+            //     primary: Colors.grey,
+            //   ),
+            // ),
           ],
         ),
       ),
