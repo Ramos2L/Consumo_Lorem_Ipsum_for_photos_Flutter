@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lorem_ipsum_for_photos/cubit/photos_cubit.dart';
+import 'package:lorem_ipsum_for_photos/widgets/drawer_tile.dart';
 
 class Home extends StatelessWidget {
   const Home({ Key? key }) : super(key: key);
@@ -11,6 +12,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(  
         title: const Text('Lorem Ipsum for Photos'),
       ),
+      drawer: DrawerTile(),
       body: Container(
         padding: const EdgeInsets.all(20),
         alignment: Alignment.center,
